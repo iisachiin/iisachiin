@@ -1,1 +1,18 @@
-
+#include<iostream>
+int main(){
+int arr[5]= {5,7,3,4,1};
+    int target =10;
+    int i,j;
+    for (i=0; i<5; i++) {
+        for(j=i+1; j<5; j++)
+        {
+            if(arr[i]+arr[j]==target) {
+                cout << "Very good" << endl;
+                cout << "Your first index is :" <<i<< endl;
+                cout << "Your second index is :" <<j<< endl;
+                break ;
+            }
+        }
+    }
+return 0;
+}
