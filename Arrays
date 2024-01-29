@@ -54,7 +54,7 @@ int main()
         cout << "Position:" << endl;
         cin >> pos;//On which position
         if(pos<=0 ||pos>size) {
-            cout << "This is invalid !" << endl;
+            cout << "This is invalid !" <<endl;
         }
         else {
             arr1[size]=arr1[pos-1];//position of an element is interchange 
