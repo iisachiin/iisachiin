@@ -1,1 +1,69 @@
-Insertion of an element in the Array at specific position 
+//Insertion of an element in the Array at specific position 
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int arr1[10];
+    int i,num,pos;
+    int size;
+    // This is first Approach
+    cout << "Enter the size of an array:" << endl;
+    cin >> size;//taking size of an array
+    /*if(size>sizeof(arr1)/sizeof(int)) {
+        cout << "This is not valid ! " << endl;//this is overflow condition
+    }
+    else {
+        cout << "The array:" << endl;
+        for(i=0; i<size; i++)
+        {
+            cin >> arr1[i];//Taking input array
+        }
+        cout << "Enter the num you want to add : " << endl;
+        cin >> num;//No. want to insert
+        cout << "Position:" << endl;
+        cin >> pos;//On which position
+        if(pos<=0 ||pos>size) {
+            cout << "This is invalid !" << endl;
+        }
+        else {
+            for(i=size; i>=pos-1; i--) {
+                arr1[i+1]=arr1[i];//Here start swapping
+            }
+            arr1[pos-1]=num;//here insert no. at position
+            cout << "The final array is :" << endl;
+            for(i=0; i<=size; i++) {
+                cout << arr1[i]<< endl;//Diplay the final array
+            }
+        }
+
+    }*/
+
+    // Second Approach
+    if(size>sizeof(arr1)/sizeof(int)) {
+        cout << "This is not valid ! " << endl;//this is overflow condition
+    }
+    else {
+        cout << "The array:" << endl;
+        for(i=0; i<size; i++)
+        {
+            cin >> arr1[i];//Taking input array
+        }
+        cout << "Enter the num you want to add : " << endl;
+        cin >> num;//No. want to insert
+        cout << "Position:" << endl;
+        cin >> pos;//On which position
+        if(pos<=0 ||pos>size) {
+            cout << "This is invalid !" << endl;
+        }
+        else {
+            arr1[size]=arr1[pos-1];//position of an element is interchange 
+            arr1[pos-1]=num;//Insert a element
+            cout << "The final array is :" << endl;
+            for(i=0; i<=size; i++) {
+                cout << arr1[i]<< endl;//Diplay the final array
+            }
+        }
+    }
+    return 0;
+}
