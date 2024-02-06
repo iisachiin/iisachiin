@@ -1,0 +1,72 @@
+//Deletion at specific position in array
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int arr1[10];
+    int i,pos, item;
+    int size;
+    // This approach for sorted array or as well unsorted
+    
+    /* cout << "Enter the size of an array:" << endl;
+     cin >> size;//taking size of an array
+     if(size>sizeof(arr1)/sizeof(int)) {
+         cout << "This is not valid ! " << endl;//this is overflow condition
+     }
+     else {
+         cout << "The array:" << endl;
+         for(i=0; i<size; i++)
+         {
+             cin >> arr1[i];//Taking input array
+         }
+         cout << "Position:" << endl;
+         cin >> pos;//On which position you want to delete
+         if(pos<0 ||pos>size) {
+             cout << "This is invalid !" << endl;
+         }
+         else {
+             item =arr1[pos-1];
+             for(i=pos-1; i<size-1; i++) {
+                 arr1[i]=arr1[i+1];//Here start swapping
+             }
+             cout << "The final array is :" << endl;
+             for(i=0; i<size-1; i++) {
+                 cout << arr1[i]<< endl;//Diplay the final array
+
+             }
+             cout << "Deleted element: "<<item << endl;
+         }
+
+     }
+    */
+    // This is best for the unsorted array
+
+    cout << "Enter the size of an array:" << endl;
+    cin >> size;//taking size of an array
+    if(size>sizeof(arr1)/sizeof(int)) {
+        cout << "This is not valid ! " << endl;//this is overflow condition
+    }
+    else {
+        cout << "The array:" << endl;
+        for(i=0; i<size; i++)
+        {
+            cin >> arr1[i];//Taking input array
+        }
+        cout << "Position:" << endl;
+        cin >> pos;//On which position you want to delete
+        if(pos<0 ||pos>size) {
+            cout << "This is invalid !" << endl;
+        }
+        else {
+            item =arr1[pos-1];
+            arr1[pos-1]=arr1[size-1];
+            cout << "The final array is :" << endl;
+            for(i=0; i<size-1; i++) {
+                cout << arr1[i]<< endl;//Diplay the final array
+            }
+            cout << "Deleted element: "<<item << endl;
+            return 0;
+        }
+    }
+}
